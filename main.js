@@ -17,7 +17,8 @@ function calculateBudget(e) {
 // om en väljer income - ska hamna i income div ----  DONE
     const selectorOption = document.querySelector("select")   // Drop down selector
 // console.log(selectorOption.value) // works - shows the specifik selector value in console
-
+var sumIncome = 0
+var sumCost = 0
 // if my constant for select.value is the same as value="Income":
     if(selectorOption.value=="Income"){
         //console.log("it works for income") // it works
@@ -40,7 +41,7 @@ function calculateBudget(e) {
             incomeArray.push(value); // Adding the values to income array
             
             //loopa igenom och addera värderna
-            var sumIncome = 0
+            
             for (var i=0; i<incomeArray.length; i++) {
                 sumIncome += Number(incomeArray[i])
             }
@@ -70,7 +71,7 @@ function calculateBudget(e) {
             costSection.innerHTML += `<p> ${description}    ${value} SEK </p>`
             costArray.push(value); //    // Adding new values to cost array.
 
-            var sumCost = 0;
+          ;
             for (var i=0; i<costArray.length; i++){
                 sumCost += Number(costArray[i])
                 //Console log utanför funkade!
@@ -89,7 +90,8 @@ function calculateBudget(e) {
     var profit = 0;
     profit= sumIncome-sumCost;
 
-
+ console.log(sumIncome)
+ console.log(sumCost)
    console.log(profit)
 
 
